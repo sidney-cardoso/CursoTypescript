@@ -1,0 +1,11 @@
+{
+  "name": "curso_typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sidney-cardoso/CursoTypescript.git",
+  "author": "Sidney Cardoso <sidneyrsc342@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
