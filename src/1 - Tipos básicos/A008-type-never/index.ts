@@ -1,5 +1,5 @@
 // Não retorna nada
-const createError = (): never => {
+export const createError = (): never => {
     throw new Error('Erro!');
 };
 createError();
