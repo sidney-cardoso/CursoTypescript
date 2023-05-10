@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 // Tipos básicos
-let name: string = "Sidney" // String: '' `` ""
+export let name: string = "Sidney" // String: '' `` ""
 let age: number = 17 // 11, 1.55, -12.23, 0xf00d, 0b1010, 0o7744
 let teen: boolean = true // Somente true ou false, não são permitido valores truthy ou falsy
 let symbol: symbol = Symbol('any-symbol')
