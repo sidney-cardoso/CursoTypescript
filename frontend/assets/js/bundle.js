@@ -10,23 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/webpack/index.ts":
-/*!******************************!*\
-  !*** ./src/webpack/index.ts ***!
-  \******************************/
+/***/ "./src/1_tipos_basicos/A018-webpack/index.ts":
+/*!***************************************************!*\
+  !*** ./src/1_tipos_basicos/A018-webpack/index.ts ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./mod */ \"./src/webpack/mod.ts\");\n\n\n//# sourceURL=webpack://curso_typescript/./src/webpack/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ./mod */ \"./src/1_tipos_basicos/A018-webpack/mod.ts\");\n\n\n//# sourceURL=webpack://curso_typescript/./src/1_tipos_basicos/A018-webpack/index.ts?");
 
 /***/ }),
 
-/***/ "./src/webpack/mod.ts":
-/*!****************************!*\
-  !*** ./src/webpack/mod.ts ***!
-  \****************************/
+/***/ "./src/1_tipos_basicos/A018-webpack/mod.ts":
+/*!*************************************************!*\
+  !*** ./src/1_tipos_basicos/A018-webpack/mod.ts ***!
+  \*************************************************/
 /***/ (() => {
 
-eval("\nconsole.log('Módulo');\n\n\n//# sourceURL=webpack://curso_typescript/./src/webpack/mod.ts?");
+eval("\nconsole.log('Módulo');\n\n\n//# sourceURL=webpack://curso_typescript/./src/1_tipos_basicos/A018-webpack/mod.ts?");
 
 /***/ })
 
@@ -61,7 +61,7 @@ eval("\nconsole.log('Módulo');\n\n\n//# sourceURL=webpack://curso_typescript/./
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/webpack/index.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/1_tipos_basicos/A018-webpack/index.ts");
 /******/ 	
 /******/ })()
 ;
