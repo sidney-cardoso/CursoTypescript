@@ -8,27 +8,30 @@ const email = document.querySelector('.email') as HTMLInputElement;
 const password = document.querySelector('.password') as HTMLInputElement;
 const password2 = document.querySelector('.password2') as HTMLInputElement;
 
-form.addEventListener('submit', function (event: Event) {
+const submitEventFN = (event: Event) => {
     event.preventDefault();
-    hideErrorMessages(this);
+    const target = event.target as HTMLFormElement;
+    hideErrorMessages(target);
 
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
     checkPasswords(password, password2);
-    if (shouldSendForm(this)) alert('Cadastro realizado com sucesso!');
-});
+    if (shouldSendForm(target)) alert('Cadastro realizado com sucesso!');
+};
 
-const checkForEmptyFields = function (...inputs: HTMLInputElement[]): void {
+form.addEventListener('submit', submitEventFN);
+
+const checkForEmptyFields = (...inputs: HTMLInputElement[]): void => {
     inputs.forEach((input) => {
         if (input.value === '') showErrorMessage(input, 'Este campo deve ser preenchido!');
     });
 };
 
-const checkEmail = function (input: HTMLInputElement): void {
+const checkEmail = (input: HTMLInputElement): void => {
     if (!isEmail(input.value)) showErrorMessage(input, 'E-mail inválido');
 };
 
-const checkPasswords = function (password: HTMLInputElement, password2: HTMLInputElement): void {
+const checkPasswords = (password: HTMLInputElement, password2: HTMLInputElement): void => {
     if (!password.value) {
         showErrorMessage(password, 'Este campo deve ser preenchido!');
         return;
@@ -44,11 +47,11 @@ const checkPasswords = function (password: HTMLInputElement, password2: HTMLInpu
     }
 };
 
-const hideErrorMessages = function (form: HTMLFormElement): void {
+const hideErrorMessages = (form: HTMLFormElement): void => {
     form.querySelectorAll('.' + SHOW_ERROR_MESSAGE).forEach((item) => item.classList.remove(SHOW_ERROR_MESSAGE));
 };
 
-const showErrorMessage = function (input: HTMLInputElement, message: string): void {
+const showErrorMessage = (input: HTMLInputElement, message: string): void => {
     const formFields = input.parentElement as HTMLDivElement;
     const errorMessage = formFields.querySelector('.error-message') as HTMLSpanElement;
 
@@ -56,7 +59,7 @@ const showErrorMessage = function (input: HTMLInputElement, message: string): vo
     formFields.classList.add(SHOW_ERROR_MESSAGE);
 };
 
-const shouldSendForm = function (form: HTMLFormElement): boolean {
+const shouldSendForm = (form: HTMLFormElement): boolean => {
     let send = true;
     form.querySelectorAll('.' + SHOW_ERROR_MESSAGE).forEach(() => (send = false));
     return send;
